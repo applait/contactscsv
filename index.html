@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>App title</title>
+        <meta name="description" content="Search and pick files from device">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" type="text/css" href="css/fontello/css/animation.css">
+        <link rel="stylesheet" type="text/css" href="css/fontello/css/iconpack.css">
+        <link rel="stylesheet" type="text/css" href="css/app.css">
+    </head>
+
+    <body class="has-topnav has-bottomnav">
+
+        <nav id="topnav"></nav>
+
+        <!-- Home view -->
+        <article id="home" class="active-view slide-left">
+            <section></section>
+        </article>
+
+        <!-- About view -->
+        <article id="about" class="slide-right">
+            <section class="has-padding">
+                <h2>About</h2>
+
+                <p>Made with <i class="icon-heart"></i> by
+                    <a href="http://applait.com" target="_blank">Applait</a>.
+                </p>
+            </section>
+        </article>
+
+        <nav id="bottomnav"></nav>
+
+        <!-- Templates -->
+
+        <!-- topnav for default pages -->
+        <template id="tmpl-topnav-default">
+            <h1>App title</h1>
+            <button data-goto="#/about">
+                <i class="icon-help"></i>
+            </button>
+        </template>
+
+        <!-- bottomnav default template -->
+        <template id="tmpl-bottomnav-default">
+            <button id="backbtn" data-goto="back">
+                <i class="icon-left-open"></i>
+            </button>
+        </template>
+
+        <!-- homepage stock text -->
+        <template id="tmpl-home-stock">
+            <p class="text-center">Welcome to sample app.</p>
+        </template>
+
+        <!-- dependencies -->
+        <script type="text/javascript" src="js/libs/riot.js"></script>
+        <script type="text/javascript" src="js/libs/utils.js"></script>
+
+        <!-- app scripts -->
+        <script type="text/javascript" src="js/appmodel.js"></script>
+        <script type="text/javascript" src="js/extend.js"></script>
+        <script type="text/javascript" src="js/route.js"></script>
+        <script type="text/javascript" src="js/ui/home.js"></script>
+        <script type="text/javascript" src="js/ui/render.js"></script>
+        <script type="text/javascript" src="js/init.js"></script>
+    </body>
+
+</html>
