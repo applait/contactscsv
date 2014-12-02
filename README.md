@@ -1,3 +1,3 @@
-# App
+# Contacts CSV
 
-Template app by Applait. This template can be used by other apps to create their content real fast.
+Firefox OS app to import contacts from a CSV file.
