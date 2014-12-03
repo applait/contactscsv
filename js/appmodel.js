@@ -57,4 +57,25 @@ var AppModel = function (arg) {
         self.view = path;
     };
 
+    /**
+     * Subscribe to FinderJS's fileFound event
+     */
+    self.finder.on("fileFound", function (file, fileinfo) {
+        self.searchresults.push({ file: file, fileinfo: fileinfo });
+    });
+
+    /**
+     * Subscribe to FinderJS's searchComplete event
+     *
+     * The `resultsFound` is triggered if any file is matched.
+     * Else, `noResults` is triggered
+     */
+    self.finder.on("searchComplete", function () {
+        if (self.searchresults.length && self.finder.filematchcount) {
+            self.trigger("resultsFound");
+        } else {
+            self.trigger("noResults", self.finder.searchkey);
+        }
+    });
+
 };
