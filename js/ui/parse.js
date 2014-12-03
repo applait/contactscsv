@@ -12,8 +12,15 @@
         /**
          * Callback after CSV has completed parsing
          */
-        var parsecomplete = function (results) {
-            console.log("complete", results);
+        var parsecomplete = function () {
+            console.log("complete");
+        };
+
+        /**
+         * Callback for errors in parsing CSV
+         */
+        var parseerror = function (error) {
+            console.log("error", error);
         };
 
         // Start parsing CSV on view load
@@ -24,7 +31,9 @@
                 header: true,
                 step: parsestep,
                 complete: parsecomplete,
-                skipEmptyLines: true
+                error: parseerror,
+                skipEmptyLines: true,
+                worker: true
             });
         });
 
