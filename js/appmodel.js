@@ -11,7 +11,7 @@ var AppModel = function (arg) {
     var self = riot.observable(this);
 
     // Store args
-    self.args = arg;
+    self.args = arg || {};
 
     // Store current view id. Default "home".
     self.view = "home";
