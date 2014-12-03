@@ -27,8 +27,7 @@
             api.searchresults.forEach(function (item, idx) {
                 searchresults += riot.render(itemtmpl, {
                     i: idx,
-                    name: item.fileinfo.name,
-                    icontype: api.iconclass(item.file.type)
+                    name: item.fileinfo.name
                 });
             });
 
