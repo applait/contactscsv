@@ -78,6 +78,27 @@
             </div>
         </template>
 
+        <!-- searchresults template -->
+        <template id="tmpl-searchresults">
+            <div id="searchresults-stats" class="has-padding">
+                <p>Found {filecount} CSV file(s). Please select one to begin import.</p>
+            </div>
+            <div id="searchresults">{searchresults}</div>
+        </template>
+
+        <!-- searchresult item -->
+        <template id="tmpl-searchresult-item">
+            <div id="searchresult-item-{i}" class="searchresult-item" data-index="{i}" data-goto="#/load/{i}">
+                <button data-goto="#/load/{i}">
+                    <i class="icon-doc"></i>
+                </button>
+                <h3 data-goto="#/load/{i}">{name}</h3>
+                <button data-goto="#/detail/{i}">
+                    <i class="icon-right-open"></i>
+                </button>
+            </div>
+        </template>
+
         <!-- dependencies -->
         <script type="text/javascript" src="js/libs/riot.js"></script>
         <script type="text/javascript" src="js/libs/EventEmitter.js"></script>

@@ -16,6 +16,32 @@
             });
         });
 
+        /**
+         * Show list of CSVs when results are found
+         */
+        api.on("resultsFound", function () {
+            var itemtmpl = $("#tmpl-searchresult-item").innerHTML.trim(),
+                listtmpl = $("#tmpl-searchresults").innerHTML.trim(),
+                searchresults = "";
+
+            api.searchresults.forEach(function (item, idx) {
+                searchresults += riot.render(itemtmpl, {
+                    i: idx,
+                    name: item.fileinfo.name,
+                    icontype: api.iconclass(item.file.type)
+                });
+            });
+
+            $("#home section").innerHTML = riot.render(listtmpl, {
+                filecount: api.finder.filematchcount,
+                searchkey: api.finder.searchkey,
+                searchresults: searchresults
+            });
+
+            // Memory cleanup
+            itemtmpl = listtmpl = searchresults = null;
+        });
+
     });
 
 })();
