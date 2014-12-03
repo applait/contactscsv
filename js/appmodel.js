@@ -22,11 +22,17 @@ var AppModel = function (arg) {
     // Toggle state for deciding whether to push history
     self.pushhistory = true;
 
+    // Instantiate FinderJS
+    self.finder = new Applait.Finder({
+        debugMode: self.args.debug || true
+    });
+
     /**
      * Reset all internals
      */
     self.reset = function () {
         self.history = [];
+        self.finder.reset();
     };
 
     /**
