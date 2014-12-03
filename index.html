@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>App title</title>
+        <title>Contacts CSV</title>
         <meta name="description" content="Search and pick files from device">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -26,6 +26,8 @@
             <section class="has-padding">
                 <h2>About</h2>
 
+                <p>Import contacts from CSV files.</p>
+
                 <p>Made with <i class="icon-heart"></i> by
                     <a href="http://applait.com" target="_blank">Applait</a>.
                 </p>
@@ -38,7 +40,7 @@
 
         <!-- topnav for default pages -->
         <template id="tmpl-topnav-default">
-            <h1>App title</h1>
+            <h1>Contacts CSV</h1>
             <button data-goto="#/about">
                 <i class="icon-help"></i>
             </button>
@@ -51,9 +53,17 @@
             </button>
         </template>
 
+        <!-- bottomnav home template -->
+        <template id="tmpl-bottomnav-home">
+            <button id="searchbtn">
+                <i class="icon-search"></i> Search again
+            </button>
+        </template>
+
         <!-- homepage stock text -->
         <template id="tmpl-home-stock">
-            <p class="text-center">Welcome to sample app.</p>
+            <p class="text-center">Searching for CSV files to import&hellip;</p>
+            <p class="text-center"><i class="icon-spin2 animate-spin"></i></p>
         </template>
 
         <!-- dependencies -->

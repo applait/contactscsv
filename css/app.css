@@ -141,7 +141,7 @@ nav button:hover, nav button:focus {
   border: none;
 }
 
-nav #resetbtn {
+nav #searchbtn {
   flex-grow: 1;
 }
 
