@@ -24,7 +24,7 @@ var AppModel = function (arg) {
 
     // Instantiate FinderJS
     self.finder = new Applait.Finder({
-        debugMode: self.args.debug || true
+        debugMode: self.args.debug === undefined ? true : self.args.debug
     });
 
     /**
