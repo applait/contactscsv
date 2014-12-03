@@ -1,7 +1,7 @@
 {
     "version": "0.0.1",
-    "name": "Appname",
-    "description": "Add app description",
+    "name": "Contacts CSV",
+    "description": "Import contacts from CSV files",
     "launch_path": "/index.html",
     "icons": {
         "48": "/img/icons/48.png",
