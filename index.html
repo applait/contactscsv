@@ -51,6 +51,9 @@
             <button id="backbtn" data-goto="back">
                 <i class="icon-left-open"></i>
             </button>
+            <button id="searchbtn" data-goto="#/home">
+                <i class="icon-search"></i> Search again
+            </button>
         </template>
 
         <!-- bottomnav home template -->
@@ -66,6 +69,14 @@
             <p class="text-center"><i class="icon-spin2 animate-spin"></i></p>
         </template>
 
+        <!-- error message for search failed -->
+        <template id="tmpl-error">
+            <div class="error has-padding">
+                <h2 class="text-center">Oops!</h2>
+                <p class="text-center">{message}</p>
+            </div>
+        </template>
+
         <!-- dependencies -->
         <script type="text/javascript" src="js/libs/riot.js"></script>
         <script type="text/javascript" src="js/libs/EventEmitter.js"></script>
@@ -78,6 +89,7 @@
         <script type="text/javascript" src="js/route.js"></script>
         <script type="text/javascript" src="js/ui/home.js"></script>
         <script type="text/javascript" src="js/ui/render.js"></script>
+        <script type="text/javascript" src="js/ui/actions.js"></script>
         <script type="text/javascript" src="js/init.js"></script>
     </body>
 

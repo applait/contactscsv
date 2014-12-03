@@ -9,4 +9,7 @@ window.addEventListener("DOMContentLoaded", function () {
         debug: false
     }).load("home");
 
+    // Trigger search
+    app().search();
+
 });
