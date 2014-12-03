@@ -36,6 +36,14 @@ var AppModel = function (arg) {
     };
 
     /**
+     * Search for CSV
+     */
+    self.search = function () {
+        self.reset();
+        self.finder.search(".csv");
+    };
+
+    /**
      * Provide a generic "load" method for routing
      */
     self.load = function (path) {
