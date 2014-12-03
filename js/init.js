@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", function () {
         topnav: "#topnav",
         bottomnav: "#bottomnav",
         searchbtn: "#searchbtn",
-        debug: false
+        debug: true
     }).load("home");
 
     // Trigger search
