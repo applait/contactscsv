@@ -22,6 +22,9 @@ var AppModel = function (arg) {
     // Toggle state for deciding whether to push history
     self.pushhistory = true;
 
+    // Store search results
+    self.searchresults = [];
+
     // Instantiate FinderJS
     self.finder = new Applait.Finder({
         debugMode: self.args.debug === undefined ? true : self.args.debug
@@ -32,6 +35,7 @@ var AppModel = function (arg) {
      */
     self.reset = function () {
         self.history = [];
+        self.searchresults = [];
         self.finder.reset();
     };
 
