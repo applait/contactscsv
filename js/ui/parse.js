@@ -5,7 +5,7 @@
         /**
          * Callback for each row parsed
          */
-        var parsestep = function (result) {
+        var parsestep = function (result, handle) {
             console.log("step", result.data, result.meta, result.errors);
         };
 
