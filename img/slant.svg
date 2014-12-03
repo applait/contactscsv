@@ -11,10 +11,10 @@
     <linearGradient
        id="gradientDefinition">
       <stop
-         style="stop-color:#2ecc71;stop-opacity:1;"
+         style="stop-color:#1ad6fd;stop-opacity:1;"
          offset="0" />
       <stop
-         style="stop-color:#27ae60;stop-opacity:1;"
+         style="stop-color:#1d62f0;stop-opacity:1;"
          offset="1" />
     </linearGradient>
     <linearGradient
