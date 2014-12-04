@@ -22,8 +22,10 @@ var ContactModel = function (data) {
 ContactModel.prototype.fieldmap = {
     givenName: ["First Name"],
     familyName: ["Last Name"],
-    email: ["E-mail Address", "E-mail 2 Address", "E-mail 3 Address", "General email", "Business email"],
-    tel: ["Mobile Phone", "Home Phone", "Business Phone", "Other Phone", "General mobile", "General phone"]
+    email: ["E-mail Address", "E-mail 2 Address", "E-mail 3 Address", "General email", "Business email",
+            "Home e-mail", "General e-mail", "Business e-mail"],
+    tel: ["Mobile Phone", "Home Phone", "Business Phone", "Other Phone", "General mobile", "General phone",
+          "Home phone", "Home mobile", "Business mobile", "Business phone"]
 };
 
 
