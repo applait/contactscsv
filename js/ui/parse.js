@@ -5,8 +5,11 @@
         /**
          * Callback for each row parsed
          */
-        var parsestep = function (result, handle) {
-            console.log("step", result.data, result.meta, result.errors);
+        var parsestep = function (results, handle) {
+            var contactinstance = new ContactModel(results.data[0]);
+
+            console.log(contactinstance.create());
+
         };
 
         /**
