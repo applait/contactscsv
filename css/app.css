@@ -11,6 +11,11 @@ html {
   box-sizing: inherit;
 }
 
+:disabled {
+  opacity: 0.3;
+  color: #a4a4a4;
+}
+
 :focus {
   outline:none;
 }
