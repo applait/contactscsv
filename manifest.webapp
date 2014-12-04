@@ -18,6 +18,10 @@
         "device-storage:sdcard": {
             "access": "readonly",
             "description": "Search files from the sdcard"
+        },
+        "contacts": {
+            "access": "readcreate",
+            "description": "Create contacts from CSV"
         }
     },
     "installs_allowed_from": [
