@@ -10,7 +10,7 @@
         var parsestep = function (results, handle) {
             var contactinstance = new ContactModel(results.data[0]);
 
-            contactlist.push(contactinstance.create());
+            contactlist.push({ contact: contactinstance.create(), import: true });
 
             $("#contactcount").innerHTML = contactlist.length;
 
