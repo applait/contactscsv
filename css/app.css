@@ -276,14 +276,14 @@ section {
 }
 
 /**
- * Search results
+ * Result lists
  */
-#searchresults {
+.resultlist {
   display: flex;
   flex-direction: column;
 }
 
-.searchresult-item {
+.resultlist-item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -293,16 +293,24 @@ section {
   padding-right: 0.5rem;
 }
 
-.searchresult-item:last-child {
+.resultlist-item:last-child {
   border-bottom: none;
 }
 
-.searchresult-item h3 {
+.resultlist-item h3, .resultlist-item .checkbox {
   flex-grow: 1;
   word-wrap: break-word;
 }
 
-.searchresult-item button {
+.checkbox label {
+  width: 90%;
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+.resultlist-item button {
   width: 2rem;
   height: 100%;
   flex-basis: 2rem;

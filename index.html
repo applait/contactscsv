@@ -99,12 +99,13 @@
             <div id="searchresults-stats" class="has-padding">
                 <p>Found {filecount} CSV file(s). Please select one to begin import.</p>
             </div>
-            <div id="searchresults">{searchresults}</div>
+            <div id="searchresults" class="resultlist">{searchresults}</div>
         </template>
 
         <!-- searchresult item -->
         <template id="tmpl-searchresult-item">
-            <div id="searchresult-item-{i}" class="searchresult-item" data-index="{i}" data-goto="#/parse/{i}">
+            <div id="searchresult-item-{i}" class="resultlist-item searchresult-item"
+                 data-index="{i}" data-goto="#/parse/{i}">
                 <button data-goto="#/parse/{i}">
                     <i class="icon-doc"></i>
                 </button>
