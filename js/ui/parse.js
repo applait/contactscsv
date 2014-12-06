@@ -20,8 +20,27 @@
          * Callback after CSV has completed parsing
          */
         var parsecomplete = function () {
+            var contacthtml = "";
             console.log("complete", contactlist);
+
+            if (contactlist.length) {
+                contactlist.forEach(function (item, idx) {
+                    contacthtml += riot.render($("#tmpl-contactlist-item").innerHTML.trim(), {
+                        name: item.contact.name,
+                        i: idx
+                    });
+                });
+
+                $("#parse section").innerHTML = riot.render($("#tmpl-contactlist").innerHTML.trim(), {
+                    count: contactlist.length,
+                    contactlist: contacthtml
+                });
+            } else {
+                $("#parse section").innerHTML = riot.render($("#tmpl-contactlist-empty").innerHTML.trim());
+            }
+
             contactlist = [];
+            contacthtml = null;
         };
 
         /**

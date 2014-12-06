@@ -36,7 +36,7 @@
 
         <!-- Parse view -->
         <article id="parse" class="slide-bottom">
-            <section class="has-padding">
+            <section>
                 <h2 class="text-center">Processing CSV file&hellip;</h2>
                 <h3 class="text-center"><span id="contactcount">0</span> contact(s) processed&hellip;</h3>
                 <p class="text-center"><i class="icon-spin2 animate-spin"></i></p>
@@ -114,6 +114,30 @@
                     <i class="icon-right-open"></i>
                 </button>
             </div>
+        </template>
+
+        <!-- contactlist template -->
+        <template id="tmpl-contactlist">
+            <div id="contactlist-stats" class="has-padding">
+                <p>Found {count} contact(s). Select the ones to import.</p>
+            </div>
+            <div id="contactlist" class="resultlist">{contactlist}</div>
+        </template>
+
+        <!-- contactlist item template -->
+        <template id="tmpl-contactlist-item">
+            <div id="contactlist-item-{i}" class="resultlist-item contactlist-item" data-index="{i}">
+                <div class="checkbox">
+                    <input type="checkbox" class="contactlist-checkbox" data-index="{i}" id="contact-checkbox-{i}"
+                           checked="true">
+                    <label for="contact-checkbox-{i}">{name}</li>
+                </div>
+            </div>
+        </template>
+
+        <!-- empty contactlist template -->
+        <template id="tmpl-contactlist-empty">
+            <h3 class="text-center">No contacts can be imported from the selected file.</h3>
         </template>
 
         <!-- dependencies -->
