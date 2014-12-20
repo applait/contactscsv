@@ -21,7 +21,6 @@
          */
         var parsecomplete = function () {
             var contacthtml = "";
-            console.log("complete", contactlist);
 
             if (contactlist.length) {
                 contactlist.forEach(function (item, idx) {
